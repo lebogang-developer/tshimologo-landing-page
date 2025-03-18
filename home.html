@@ -12,8 +12,12 @@
     ></script>
   </head>
   <body class="bg-gray-100">
+      <!-- Back to Top Button -->
+      <button id="backToTop" class="hidden fixed bottom-6 right-6 bg-yellow-500 text-white p-3 rounded-full shadow-lg hover:bg-yellow-600 transition-all">
+        &#8679;
+    </button>
     <!-- Navbar -->
-    <nav class="bg-white shadow-md py-4">
+    <nav id="navbar" class="bg-white shadow-md py-2 fixed top-0 left-0 w-full z-50 transition-all duration-300">
       <div class="container mx-auto flex justify-between items-center px-6">
         <img
           src="assets/logo.jpeg"
@@ -28,6 +32,9 @@
           ></a>
           <a href="#" class="text-gray-700 hover:text-pink-600 text-2xl"
             ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="text-gray-700 hover:text-blue-600 text-2xl"
+            ><i class="fab fa-linkedin"></i
           ></a>
         </div>
 
@@ -64,19 +71,13 @@
       </div>
     </nav>
 
-    <!-- Hero Section with Curved Bottom -->
     <!-- Hero Section -->
-    <section id="home" class="bg-blue-600 text-white py-20 text-center">
-      <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold">Numbers with Precision, We Got You!</h2>
-        <p class="mt-4 text-lg">
-          Professional Accounting, Tax, and Business Registration Services
-        </p>
-        <a
-          href="#contact"
-          class="mt-6 inline-block bg-yellow-400 text-black font-bold py-3 px-6 rounded-full hover:bg-yellow-500"
-          >Get Started</a
-        >
+    <section class="relative bg-black text-white py-20">
+      <div class="absolute inset-0 bg-gradient-to-b from-gray-900 to-black opacity-75"></div>
+      <div class="relative container mx-auto px-6 text-center">
+          <h1 class="text-4xl font-bold mt-10 mb-4">Welcome to Tshimologo Accountants</h1>
+          <p class="text-lg text-yellow-500 font-semibold">Numbers with Precision,<span class="text-white"> We Got You</span></p>
+        <a href="#services" class="mt-6 inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg shadow-md hover:bg-yellow-600">Explore Our Services</a>
       </div>
     </section>
 
@@ -84,7 +85,7 @@
     <section id="about" class="py-16 bg-white">
       <div class="container mx-auto px-6 text-center">
           <h2 class="text-3xl font-bold text-gray-800 mb-6">About Us</h2>
-          <p class="text-gray-600 mb-12">Tshimologo Accountants is a professional accounting firm dedicated to providing comprehensive financial services to businesses and individuals.</p>
+          <p class="text-gray-600 mb-12">Tshimologo Accountants is a professional accounting <br> firm dedicated to providing comprehensive financial services to businesses and individuals.</p>
           
           <div class="grid md:grid-cols-3 gap-8">
               <!-- Card 1 -->
@@ -109,7 +110,7 @@
               </div>
           </div>
       </div>
-  </section>
+    </section>
 
   <!-- Services Section -->
   <section id="services" class="py-16 bg-gray-50">
@@ -133,20 +134,80 @@
             </div>
         </div>
     </div>
-</section>
+  </section>
+
+   <!-- Contact Section -->
+   <section id="contact" class="container mx-auto px-6 py-16">
+    <div class="grid md:grid-cols-2 gap-8 bg-white shadow-md rounded-lg p-8">
+        <!-- Contact Info -->
+        <div>
+            <h2 class="text-2xl font-bold text-gray-800">Contact Us</h2>
+            <p class="text-gray-600 mt-2">Get in touch with us for any inquiries.</p>
+            
+            <div class="mt-6 space-y-4">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                    <span>opule@tshimologoaccountants.co.za</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-phone text-blue-600 text-xl"></i>
+                    <span>073 691 4373</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <i class="fab fa-facebook text-blue-600 text-xl"></i>
+                    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <i class="fab fa-instagram text-pink-600 text-xl"></i>
+                    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <i class="fab fa-linkedin text-blue-600 text-xl"></i>
+                    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <form class="space-y-4">
+          <h2 class="text-2xl font-bold text-gray-800">Send us a message</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+              
+                <input type="text" placeholder="First Name" class="w-full p-3 border border-gray-300 rounded-lg">
+                <input type="text" placeholder="Last Name" class="w-full p-3 border border-gray-300 rounded-lg">
+            </div>
+            <input type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded-lg">
+            <input type="text" placeholder="Phone Number" class="w-full p-3 border border-gray-300 rounded-lg">
+            <textarea placeholder="Your Message" class="w-full p-3 border border-gray-300 rounded-lg h-32"></textarea>
+            
+            <select class="w-full p-3 border border-gray-300 rounded-lg">
+                <option selected disabled>Choose a Service</option>
+                <option>Accounting Services</option>
+                <option>Tax Compliance</option>
+                <option>CIPC Services</option>
+            </select>
+            
+            <button type="submit" class="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600">Send Message</button>
+        </form>
+    </div>
+   </section>
+
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white text-center py-6 mt-10">
       <div class="container mx-auto">
         <p>&copy; 2025 Tshimologo Accountants. All rights reserved.</p>
-        <p>
+        <!-- <p>
           Contact us:
           <a
             href="mailto:opule@tshimologoaccountants.co.za"
             class="text-yellow-400"
             >opule@tshimologoaccountants.co.za</a
           >
-        </p>
+        </p> -->
+        <p>Website design by <a href="#" class="text-gray" target="_blank"
+          > Lebo Sekaleli</i
+        ></a> </p>
       </div>
     </footer>
     <script src="index.js"></script>
