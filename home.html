@@ -7,6 +7,7 @@
     <link href="dist/output.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script
       src="https://kit.fontawesome.com/da71bff230.js"
       crossorigin="anonymous"
@@ -76,8 +77,12 @@
     <section class="relative bg-black text-white py-20">
       <div class="absolute inset-0 bg-gradient-to-b from-gray-900 to-black opacity-75"></div>
       <div class="relative container mx-auto px-6 text-center">
-          <h1 class="text-4xl font-bold mt-10 mb-4">Welcome to Tshimologo Accountants</h1>
-          <p class="text-lg text-yellow-500 font-semibold">Numbers with Precision,<span class="text-white"> We Got You</span></p>
+        <h1 class="text-4xl mt-10 mb-4 md:text-5xl font-bold animate__animated animate__fadeInLeft">
+          Welcome to Tshimologo Accountants
+      </h1>
+      <p class="text-lg md:text-xl text-yellow-400 mt-4 animate__animated animate__fadeInRight">
+        Numbers with Precision, We Got You
+    </p>
         <a href="#services" class="mt-6 inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg shadow-md hover:bg-yellow-600">Explore Our Services</a>
       </div>
     </section>
@@ -114,28 +119,35 @@
     </section>
 
   <!-- Services Section -->
-  <section id="services" class="py-16 bg-gray-50">
+  <section id="services" class="py-16 bg-gray-100">
     <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Services</h2>
+        <h2 class="text-4xl font-bold mb-8">Our Services</h2>
+        
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                <i class="fas fa-file-invoice-dollar text-4xl text-blue-500"></i>
-                <h3 class="text-xl font-semibold text-gray-700 mt-4">Accounting Services</h3>
-                <p class="text-gray-600 mt-2">Financial statements, bookkeeping, and management reports to help you stay organized.</p>
+            <!-- Service Card 1 -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-md animate__animated" data-delay="0">
+                <i class="fas fa-calculator text-4xl text-blue-500 mb-4"></i>
+                <h3 class="text-2xl font-semibold mb-2">Accounting Services</h3>
+                <p class="text-gray-600">Professional bookkeeping and financial statement preparation.</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                <i class="fas fa-balance-scale text-4xl text-green-500"></i>
-                <h3 class="text-xl font-semibold text-gray-700 mt-4">Tax Compliance</h3>
-                <p class="text-gray-600 mt-2">VAT, PAYE, company tax returns, and SARS compliance to keep your business in check.</p>
+
+            <!-- Service Card 2 -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-md animate__animated" data-delay="200">
+                <i class="fas fa-file-invoice-dollar text-4xl text-green-500 mb-4"></i>
+                <h3 class="text-2xl font-semibold mb-2">Tax Compliance</h3>
+                <p class="text-gray-600">Tax planning and compliance services to keep you stress-free.</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                <i class="fas fa-building text-4xl text-purple-500"></i>
-                <h3 class="text-xl font-semibold text-gray-700 mt-4">CIPC Services</h3>
-                <p class="text-gray-600 mt-2">Company registration, amendments, and BEE affidavits to help you set up legally.</p>
+
+            <!-- Service Card 3 -->
+            <div class="service-card bg-white p-6 rounded-lg shadow-md animate__animated" data-delay="400">
+                <i class="fas fa-building text-4xl text-yellow-500 mb-4"></i>
+                <h3 class="text-2xl font-semibold mb-2">CIPC Services</h3>
+                <p class="text-gray-600">Company registrations, amendments, and compliance support.</p>
             </div>
         </div>
     </div>
-  </section>
+</section>
+
 
    <!-- Contact Section -->
    <section id="contact" class="container mx-auto px-6 py-16">
