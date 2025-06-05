@@ -1,3 +1,8 @@
+// Copyright - Get full year logic
+const year = document.querySelector('#current-year');
+year.innerHTML = new Date().getFullYear();
+
+
 window.addEventListener('scroll', function () {
   let navbar = document.getElementById('navbar');
 
