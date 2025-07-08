@@ -2,7 +2,6 @@
 const year = document.querySelector('#current-year');
 year.innerHTML = new Date().getFullYear();
 
-
 window.addEventListener('scroll', function () {
   let navbar = document.getElementById('navbar');
 
@@ -60,6 +59,25 @@ document
   .getElementById('contact-form')
   .addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent form submission
+
+    // Format message for WhatsApp
+    const fullMessage = `
+*New Contact Form Submission:*
+👤 *Name:* ${firstName} ${lastName}
+📧 *Email:* ${email}
+📱 *Phone:* ${phone}
+💼 *Service:* ${service}
+📝 *Message:* ${message}
+`;
+
+    const phoneNumber = '27736914373'; // e.g., 27711234567 (South Africa)
+    const encodedMessage = encodeURIComponent(fullMessage);
+
+    // Redirect to WhatsApp
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
+      '_blank'
+    );
 
     // Form Fields
     const firstName = document.getElementById('first-name').value.trim();
