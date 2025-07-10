@@ -272,7 +272,7 @@
 
             <!-- Contact Form -->
             <div class="bg-white p-6 rounded-lg shadow-md">
-                <form id="contact-form">
+                <form action="https://formspree.io/f/mjkrnkvz" id="contact-form" method="POST">
                     <div class="mb-4">
                         <label class="block text-gray-700 font-semibold">First Name</label>
                         <input type="text" id="first-name" class="w-full p-2 border rounded" placeholder="Enter your name">
@@ -313,7 +313,8 @@
                         <textarea id="message" class="w-full p-2 border rounded" rows="4" placeholder="Your message..."></textarea>
                         <p class="text-red-500 text-sm mt-1 hidden" id="error-message"></p>
                     </div>
-
+                    <!-- Success message after sending the form -->
+                     <p id="success-msg class="hidden text-green-600 mt-4">Message sent successfully!</p>
                     <button type="submit" class="w-full bg-yellow-600 text-white p-3 rounded-lg hover:bg-yellow-700 transition-all">Send Message</button>
                 </form>
             </div>
@@ -331,5 +332,29 @@
       </div>
     </footer>
     <script src="index.js"></script>
+    <!-- Success message for the form -->
+     <script>
+      document.getElementByID('contact-form').addEventListener('submit', function(e){
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+        const action = from.action;
+
+        fetch(action, {
+          method: "POST",
+          body: data,
+          headers: {
+            Accept: "application/json"
+          }
+        }).then(response => {
+          if (response.ok) {
+            document.getElementById('success-msg').classList.remove('hidden');
+            form.reset();
+          } else {
+            alert('There was an error. Please try again!');
+          }
+        });
+      });
+     </script>
   </body>
 </html>
