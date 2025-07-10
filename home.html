@@ -275,31 +275,31 @@
                 <form action="https://formspree.io/f/mjkrnkvz" id="contact-form" method="POST">
                     <div class="mb-4">
                         <label class="block text-gray-700 font-semibold">First Name</label>
-                        <input type="text" id="first-name" class="w-full p-2 border rounded" placeholder="Enter your name">
+                        <input type="text" name="first_name" id="first-name" class="w-full p-2 border rounded" placeholder="Enter your name">
                         <p class="text-red-500 text-sm mt-1 hidden" id="error-first-name"></p>
                     </div>
 
                     <div class="mb-4">
                         <label class="block text-gray-700 font-semibold">Last Name</label>
-                        <input type="text" id="last-name" class="w-full p-2 border rounded" placeholder="Enter your surname">
+                        <input type="text" name="last_name" id="last-name" class="w-full p-2 border rounded" placeholder="Enter your surname">
                         <p class="text-red-500 text-sm mt-1 hidden" id="error-last-name"></p>
                     </div>
 
                     <div class="mb-4">
                         <label class="block text-gray-700 font-semibold">Email</label>
-                        <input type="email" id="email" class="w-full p-2 border rounded" placeholder="Enter your email">
+                        <input type="email" name="email" id="email" class="w-full p-2 border rounded" placeholder="Enter your email">
                         <p class="text-red-500 text-sm mt-1 hidden" id="error-email"></p>
                     </div>
 
                     <div class="mb-4">
                         <label class="block text-gray-700 font-semibold">Phone Number</label>
-                        <input type="tel" id="phone" class="w-full p-2 border rounded" placeholder="Enter your cell numbers">
+                        <input type="tel" name="phone" id="phone" class="w-full p-2 border rounded" placeholder="Enter your cell numbers">
                         <p class="text-red-500 text-sm mt-1 hidden" id="error-phone"></p>
                     </div>
 
                     <div class="mb-4">
                         <label class="block text-gray-700 font-semibold">Select Service</label>
-                        <select id="service" class="w-full p-2 border rounded">
+                        <select id="service" name="service" class="w-full p-2 border rounded">
                             <option value="">Choose a service</option>
                             <option value="accounting">Accounting Services</option>
                             <option value="tax">Tax Compliance</option>
@@ -310,7 +310,7 @@
 
                     <div class="mb-4">
                         <label class="block text-gray-700 font-semibold">Message</label>
-                        <textarea id="message" class="w-full p-2 border rounded" rows="4" placeholder="Your message..."></textarea>
+                        <textarea id="message" name="message" class="w-full p-2 border rounded" rows="4" placeholder="Your message..."></textarea>
                         <p class="text-red-500 text-sm mt-1 hidden" id="error-message"></p>
                     </div>
                     <!-- Success message after sending the form -->
